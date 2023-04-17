@@ -1,16 +1,39 @@
 <!DOCTYPE html>
-
 <html>
+  <head>
+    <title>Form Example</title>
+  </head>
+  <body>
+    <h2>Registration Form</h2>
+    <form>
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="First Name"><br>
 
-<head>
-	<link rel="stylesheet" href="styles.css">
-</head>
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="Last Name"><br>
 
-<body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="Phone Number"><br>
 
-</body>
+      <label for="email">Email ID:</label>
+      <input type="email" id="email" name="Email ID"><br>
 
+      <input type="button" value="Submit" onclick="showAlert()">
+    </form>
+
+    <script>
+      function showAlert() {
+        const firstName = document.getElementById("firstName").value;
+        const lastName = document.getElementById("lastName").value;
+        const phone = document.getElementById("phone").value;
+        const email = document.getElementById("email").value;
+
+        alert("First Name: " + firstName + "\n" +
+              "Last Name: " + lastName + "\n" +
+              "Phone Number: " + phone + "\n" +
+              "Email ID: " + email);
+      }
+    </script>
+  </body>
 </html>
+
